@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../../layout/head')%>
+    <!-- <link rel="stylesheet" href="/styles/layout.css">
+    <link rel="stylesheet" href="/styles/modules.css"> -->
+</head>
+
+<body>
+   
+    <header>
+
+                <%- include('../../layout/header')%>
+    </header>
+
+    <main id="main">
+        <section>
+            <article>
+                <img src="<%= book.image_url %>">
+                <h4>Tilte: <span><%= book.title %></span></h4>
+                <h3>Author: <%= book.author %></h3>
+                <p>Description: <%= book.description %></p>
+                <p>Isbn: <%= book.isbn %></p>
+                <p>Bookshelf: <%= book.bookshelf %></p>
+            </article>
+          </section>
+        
+    </main>
+    <%- include('../../layout/footer')%>
+</body>
+
+</html>

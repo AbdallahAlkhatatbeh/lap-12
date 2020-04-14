@@ -1,38 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/reset.css">
+    <%- include('../../layout/head')%>
     <link rel="stylesheet" href="/styles/base.css">
     <link rel="stylesheet" href="/styles/modules.css">
-    <link rel="stylesheet" href="/styles/layout.css">
-    <title>Document</title>
 </head>
-<body>
-     <header>
-         <h1>Search page</h1>
-     </header>
- <main> 
-     <form action="\search" method="POST" >
-         <label >
-             <span>Enter by author or by title</span> 
-             <input type="text" name="SearchFor"> 
-        </label>
-        <label for="">
-            <span>Title</span>
-          <input type="radio" name="search" value="title" required>
-        </label>
-    <label for="">
-        <span>Author</span>
-        <input type="radio" name="search" value="author" required>
-    </label>
-    
-    <input type="submit" value="Search the Google Books API">
-    </form>
- </main>
-<footer></footer>
 
+<body>
+    <%- include('../../layout/header')%>
     
+
+    <main id="main">
+        <h2 id="h2">Search by Title or Author</h2>
+
+        <form id="form" action="/searches" method="POST">
+            <div id="div">
+                <input id="enterI" type="text" placeholder="Enter a title or author" name="enter">
+
+                <label class="titlel">Title<input class="title" name="radioType" type="radio" value="title">
+                </label>
+                <label class="titlel">Author<input class="title" name="radioType" type="radio" value="author"></label>
+
+                <button id="button" type="submit">Search the Google Books API</button>
+            </div>
+        </form>
+    </main>
+    
+   <%- include('../../layout/footer')%>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+     
 </body>
-</html>
+
+</html> 
